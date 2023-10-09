@@ -26,34 +26,34 @@ import QomoLogin from "@/components/QomoLogin/index.vue";
   justify-content: space-between;
 }
 .login_left {
-  padding-left: 288px;
-  padding-top: 212px;
+  padding-left: 360px;
+  padding-top: 265px;
   .big_title {
-    height: 32px;
-    font-size: 32px;
+    height: 40px;
+    font-size: 40px;
     font-weight: 500;
     color: #212121;
-    line-height: 32px;
+    line-height: 40px;
   }
   .Secondary_title {
-    height: 14px;
-    font-size: 16px;
+    height: 18px;
+    font-size: 20px;
     font-weight: 400;
     color: #666666;
-    line-height: 14px;
-    margin-top: 16px;
+    line-height: 18px;
+    margin-top: 20px;
   }
   .left_bg {
-    width: 504px;
-    height: 352px;
+    width: 630px;
+    height: 440px;
     opacity: 1;
     background: url("../../assets/image/login-left.png") no-repeat;
     background-size: 100% 100%;
-    margin-top: 26px;
+    margin-top: 32px;
   }
 }
 .login_right {
-  padding-right: 208px;
-  padding-top: 212px;
+  padding-right: 260px;
+  padding-top: 265px;
 }
 </style>

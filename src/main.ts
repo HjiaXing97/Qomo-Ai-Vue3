@@ -4,7 +4,7 @@ import "element-plus/dist/index.css";
 
 import App from "./App.vue";
 import "@/assets/style/index.scss";
-import "@/assets/style/style.css";
 import router from "@/router/index.ts";
+import pinia from "@/store";
 
-createApp(App).use(router).mount("#app");
+createApp(App).use(pinia).use(router).mount("#app");
