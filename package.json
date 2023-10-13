@@ -11,10 +11,13 @@
     "commit": "git-cz"
   },
   "dependencies": {
+    "@types/js-cookie": "^3.0.4",
     "axios": "^1.5.1",
     "element-plus": "^2.3.14",
+    "js-cookie": "^3.0.5",
     "normalize.css": "^8.0.1",
     "pinia": "^2.1.6",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "prettier": "^3.0.3",
     "sass": "^1.69.0",
     "vue": "^3.3.4",

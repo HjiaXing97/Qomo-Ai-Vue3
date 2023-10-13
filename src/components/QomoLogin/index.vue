@@ -2,9 +2,12 @@
 import { IUserForm } from "./types";
 import { onMounted, ref, toRef } from "vue";
 import useUserInfoStore from "@/store/user";
+import { useRouter } from "vue-router";
+
 const store = useUserInfoStore();
 const captcha = toRef(store, "randomImageUrl");
 const dataNow = ref(0);
+const router = useRouter();
 
 const getRandomImage = async () => {
   await store.getRandomImage();
@@ -13,6 +16,7 @@ const getRandomImage = async () => {
 const getSysLogin = async () => {
   const param = { ...form.value };
   await store.useGetLogin({ ...param });
+  await router.push("/main");
 };
 
 onMounted(() => {
@@ -20,7 +24,11 @@ onMounted(() => {
   getRandomImage();
 });
 
-const form = ref<IUserForm>({ username: "", password: "", captcha: "" });
+const form = ref<IUserForm>({
+  username: "admin",
+  password: "123456",
+  captcha: ""
+});
 </script>
 
 <template>

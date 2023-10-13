@@ -5,18 +5,27 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  "@types/js-cookie":
+    specifier: ^3.0.4
+    version: registry.npmmirror.com/@types/js-cookie@3.0.4
   axios:
     specifier: ^1.5.1
     version: registry.npmmirror.com/axios@1.5.1
   element-plus:
     specifier: ^2.3.14
     version: registry.npmmirror.com/element-plus@2.3.14(vue@3.3.4)
+  js-cookie:
+    specifier: ^3.0.5
+    version: registry.npmmirror.com/js-cookie@3.0.5
   normalize.css:
     specifier: ^8.0.1
     version: registry.npmmirror.com/normalize.css@8.0.1
   pinia:
     specifier: ^2.1.6
     version: registry.npmmirror.com/pinia@2.1.6(typescript@5.2.2)(vue@3.3.4)
+  pinia-plugin-persistedstate:
+    specifier: ^3.2.0
+    version: registry.npmmirror.com/pinia-plugin-persistedstate@3.2.0(pinia@2.1.6)
   prettier:
     specifier: ^3.0.3
     version: registry.npmmirror.com/prettier@3.0.3
@@ -1063,6 +1072,17 @@ packages:
     name: "@types/estree"
     version: 1.0.2
     dev: true
+
+  registry.npmmirror.com/@types/js-cookie@3.0.4:
+    resolution:
+      {
+        integrity: sha512-vMMnFF+H5KYqdd/myCzq6wLDlPpteJK+jGFgBus3Da7lw+YsDmx2C8feGTzY2M3Fo823yON+HC2CL240j4OV+w==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/@types/js-cookie/-/js-cookie-3.0.4.tgz
+      }
+    name: "@types/js-cookie"
+    version: 3.0.4
+    dev: false
 
   registry.npmmirror.com/@types/lodash-es@4.17.9:
     resolution:
@@ -3809,6 +3829,18 @@ packages:
     version: 2.0.0
     dev: true
 
+  registry.npmmirror.com/js-cookie@3.0.5:
+    resolution:
+      {
+        integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/js-cookie/-/js-cookie-3.0.5.tgz
+      }
+    name: js-cookie
+    version: 3.0.5
+    engines: { node: ">=14" }
+    dev: false
+
   registry.npmmirror.com/js-tokens@4.0.0:
     resolution:
       {
@@ -5042,6 +5074,22 @@ packages:
     engines: { node: ">=0.10" }
     hasBin: true
     dev: true
+
+  registry.npmmirror.com/pinia-plugin-persistedstate@3.2.0(pinia@2.1.6):
+    resolution:
+      {
+        integrity: sha512-tZbNGf2vjAQcIm7alK40sE51Qu/m9oWr+rEgNm/2AWr1huFxj72CjvpQcIQzMknDBJEkQznCLAGtJTIcLKrKdw==,
+        registry: https://registry.npm.taobao.org/,
+        tarball: https://registry.npmmirror.com/pinia-plugin-persistedstate/-/pinia-plugin-persistedstate-3.2.0.tgz
+      }
+    id: registry.npmmirror.com/pinia-plugin-persistedstate/3.2.0
+    name: pinia-plugin-persistedstate
+    version: 3.2.0
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: registry.npmmirror.com/pinia@2.1.6(typescript@5.2.2)(vue@3.3.4)
+    dev: false
 
   registry.npmmirror.com/pinia@2.1.6(typescript@5.2.2)(vue@3.3.4):
     resolution:

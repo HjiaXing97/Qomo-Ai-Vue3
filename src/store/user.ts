@@ -1,5 +1,7 @@
 import { defineStore } from "pinia";
 import { getSysLogin, getSysRandomImage } from "@/request/user.ts";
+import { ElMessage } from "element-plus";
+import { setToken } from "@/utils/auth.ts";
 
 const useUserInfoStore = defineStore("userInfo", {
   state: () => ({
@@ -10,20 +12,28 @@ const useUserInfoStore = defineStore("userInfo", {
   }),
   actions: {
     async useGetLogin(data: any) {
-      console.log(this.dataNow);
       data.checkKey = this.dataNow;
-      const res = await getSysLogin(data);
-      if (res.code === 421 && res.message === "验证码错误") {
+      const { result, code, message } = await getSysLogin(data);
+      if (code === 412) {
         await this.getRandomImage();
+        ElMessage.error({
+          message
+        });
+
+        return;
       }
-      console.log(res);
+      this.token = result?.token;
+      setToken(this.token);
+      this.userInfo = result?.userInfo;
     },
+
     async getRandomImage() {
       this.dataNow = Date.now();
       const res = await getSysRandomImage(this.dataNow, { _t: Date.now() });
       this.randomImageUrl = res.result;
     }
-  }
+  },
+  persist: true
 });
 
 export default useUserInfoStore;
