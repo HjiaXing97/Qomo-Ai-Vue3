@@ -15,6 +15,9 @@ declare module "vue" {
     ElHeader: (typeof import("element-plus/es"))["ElHeader"];
     ElInput: (typeof import("element-plus/es"))["ElInput"];
     ElMain: (typeof import("element-plus/es"))["ElMain"];
+    ElMenu: (typeof import("element-plus/es"))["ElMenu"];
+    ElMenuItem: (typeof import("element-plus/es"))["ElMenuItem"];
+    ElSubMenu: (typeof import("element-plus/es"))["ElSubMenu"];
     QomoHeader: (typeof import("./src/components/QomoHeader/index.vue"))["default"];
     QomoLogin: (typeof import("./src/components/QomoLogin/index.vue"))["default"];
     QomoMenu: (typeof import("./src/components/QomoMenu/index.vue"))["default"];

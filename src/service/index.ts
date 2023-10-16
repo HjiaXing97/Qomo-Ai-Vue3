@@ -6,7 +6,7 @@ const jxRequest = new JxRequest({
   timeout: TIME_OUT,
   baseURL: BASE_URL,
   headers: {
-    "X-Access-Token": getToken()
+    "X-Access-Token": getToken() ?? ""
   }
 });
 

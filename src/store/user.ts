@@ -11,6 +11,10 @@ const useUserInfoStore = defineStore("userInfo", {
     randomImageUrl: ""
   }),
   actions: {
+    /**
+     * @param data 登录参数
+     * @returns
+     */
     async useGetLogin(data: any) {
       data.checkKey = this.dataNow;
       const { result, code, message } = await getSysLogin(data);
@@ -23,10 +27,14 @@ const useUserInfoStore = defineStore("userInfo", {
         return;
       }
       this.token = result?.token;
+      // 将token存入cookie
       setToken(this.token);
       this.userInfo = result?.userInfo;
     },
 
+    /**
+     * @description  生成验证码图片,将图片存入store
+     */
     async getRandomImage() {
       this.dataNow = Date.now();
       const res = await getSysRandomImage(this.dataNow, { _t: Date.now() });

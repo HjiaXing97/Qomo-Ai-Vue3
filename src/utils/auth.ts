@@ -10,4 +10,8 @@ function setToken(token: string) {
   return CookieJs.set(AUTH_TOKEN, token);
 }
 
-export { getToken, setToken };
+function removeToken() {
+  return CookieJs.remove(AUTH_TOKEN);
+}
+
+export { getToken, setToken, removeToken };

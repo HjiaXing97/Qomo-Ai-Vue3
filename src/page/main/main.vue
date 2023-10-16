@@ -8,10 +8,12 @@ import QomoMenu from "@/components/QomoMenu/index.vue";
     <el-container>
       <el-header> <QomoHeader /></el-header>
       <el-container>
-        <el-aside width="200px">
+        <el-aside width="240px">
           <QomoMenu />
         </el-aside>
-        <el-main></el-main>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -23,6 +25,13 @@ import QomoMenu from "@/components/QomoMenu/index.vue";
   height: 100%;
   .el-header {
     padding: 0;
+  }
+  > .el-container {
+    width: 100%;
+    height: 100%;
+  }
+  .el-main {
+    background-color: #f5f7fa;
   }
 }
 </style>

@@ -8,7 +8,7 @@
 
 <style lang="scss" scoped>
 .qomo-header {
-  width: 100%;
+  width: 100vw;
   opacity: 1;
   background: #2474ff;
   height: 60px;
@@ -16,6 +16,7 @@
   align-items: center;
   padding: 0 20px;
   justify-content: space-between;
+  box-sizing: border-box;
   .logo-main {
     background: url("../../assets/image/logo-main.png") no-repeat;
     background-size: 100% 100%;
