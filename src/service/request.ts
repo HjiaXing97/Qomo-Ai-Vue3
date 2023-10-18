@@ -1,7 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from "axios";
 import { ElMessage } from "element-plus";
 import router from "@/router";
-import { removeToken } from "@/utils/auth";
 
 class JxRequest {
   instance: AxiosInstance;
@@ -28,7 +27,6 @@ class JxRequest {
         const { code, message } = data;
 
         if (code === 401) {
-          removeToken();
           router.push("/login");
           ElMessage.error(message);
         }

@@ -1,16 +1,18 @@
 <script lang="ts" setup>
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { onMounted, toRef } from "vue";
 
 import useMenuStore from "@/store/menu.ts";
 
 const store = useMenuStore();
 const router = useRouter();
+const route = useRoute();
 
 const menu = toRef(store, "leftMenu");
 
 onMounted(async () => {
-  await store.useGetLeftMenu();
+  console.log(route.path);
+  console.log(menu.value);
 });
 
 /**
@@ -34,12 +36,15 @@ const getChildIndex = (index: number, childIndex: number) => {
  */
 const getItemRoute = (item: any) => {
   router.push(item.url);
-  console.log(item.url);
+};
+
+const openSubMenu = (index: string, indexPath: string[]) => {
+  console.log(index, indexPath);
 };
 </script>
 
 <template>
-  <el-menu default-active="1">
+  <el-menu :unique-opened="true" default-active="1" @open="openSubMenu">
     <template v-for="(item, index) in menu" :key="item.id">
       <el-sub-menu v-if="isSubMenu(item)" :index="(index + 1).toString()">
         <template v-slot:title>

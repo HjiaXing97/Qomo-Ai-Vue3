@@ -5,6 +5,12 @@ import router from "@/router";
  * @param routes
  */
 function addRoutes(routes: any[]) {
+  router.removeRoute("main");
+  router.addRoute({
+    path: "/main",
+    name: "main",
+    component: () => import("@/page/main/main.vue")
+  });
   routes.forEach((v: any) => {
     if (Array.isArray(v.children) && v.children.length > 0) {
       v.children.forEach((v2: any) => {
